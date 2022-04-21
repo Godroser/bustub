@@ -47,6 +47,9 @@ class LRUReplacer : public Replacer {
 
  private:
   // TODO(student): implement me!
+  std::list <frame_id_t> l_frames;  //queue for frames
+  size_t sizeframe;  //max number of q_frames
+  std::unordered_map<page_id_t, frame_id_t> page_table_; 
 };
 
 }  // namespace bustub
